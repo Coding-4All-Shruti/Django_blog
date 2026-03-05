@@ -9,11 +9,14 @@ class BlogAdmin(admin.ModelAdmin):
 
     """list_diplay is used to display the fields in the admin panel list """
     list_display = ('title', 'author', 'status', 'is_featured')
-    search_fields = ('id', 'title', 'category__category_name', 'status')
 
+    """search_fields is used to search the record in the admin panel list view based on the fields mentioned in the search_fields tuple"""
+    search_fields = ('id', 'title', 'category__category_name', 'status')
+    """list_editable is used to make the field editable in the list view of admin panel without going into the detail page of that particular record"""
     list_editable = ('is_featured',)
 
 
 admin.site.register(Category)
 
 admin.site.register(blog, BlogAdmin)
+
