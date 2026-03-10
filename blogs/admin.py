@@ -20,3 +20,4 @@ admin.site.register(Category)
 
 admin.site.register(blog, BlogAdmin)
 
+
