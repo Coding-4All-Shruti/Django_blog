@@ -12,6 +12,7 @@
 
     <!-- Right sidebar -->
     <div class="col-md-9">
+      {% if perms.auth.view_user %}
         <h3>All Posts</h3>
 
         <a href="{% url 'add_post' %}" class="btn btn-dark text-light float-right mb-2">Add New</a>
@@ -47,6 +48,9 @@
     
   </tbody>
 </table>
+{% else %}
+<h5>you do not have permission to view this page</h5>
+{% endif %}
         
     </div>
 
