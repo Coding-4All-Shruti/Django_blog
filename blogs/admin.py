@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Category, blog
+from .models import Category, blog, Comment
+from django.contrib.auth.models import User
 
 ### prepopulated slug
 
@@ -19,5 +20,7 @@ class BlogAdmin(admin.ModelAdmin):
 admin.site.register(Category)
 
 admin.site.register(blog, BlogAdmin)
+
+admin.site.register(Comment)
 
 
